@@ -7,7 +7,6 @@ const CardGame = () => {
   //   const [result, setResult] = useState(null);
   const [playerA, setPlayerA] = useState(null);
   const [playerB, setPlayerB] = useState(null);
-
   const players = {
     common: [
       { playerName: "Simant", stats: { PAC: 80, SHO: 55, PAS: 60, PHY: 75 } },

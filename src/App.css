@@ -42,6 +42,7 @@
   flex-direction: column;
   justify-content: center;
   text-transform: uppercase;
+  -webkit-animation: pullcard 2s linear infinite;
 }
 .common-rarity {
   /* clip-path: polygon(
@@ -58,7 +59,9 @@
 .gradient-background-common {
   background: linear-gradient(300deg, #c6bbbb, #736a6a, #edd3d3, #e3d9d9);
   background-size: 180% 180%;
-  animation: gradient-animation-common 10s ease infinite;
+  -webkit-animation: pullcard 2s linear infinite;
+  animation: gradient-animation-common 10s ease infinite, pullCard 0.9s ease;
+
   border-radius: 16px;
   border: 2px solid rgb(154, 140, 140);
   /* animation: pullCard 0.9s ease; */
@@ -88,9 +91,9 @@
     0% 70%,
     0% 30%
   ); */
-  animation: pullCard 0.9s ease;
 }
 .gradient-background-rare {
+  perspective: 500px;
   background: linear-gradient(
     300deg,
     #c6bbbb,
@@ -101,9 +104,16 @@
     #e5cd0c
   );
   background-size: 360% 360%;
-  animation: gradient-animation-rare 17s ease infinite;
-
+  animation: gradient-animation-rare 17s ease infinite, pullCard 0.9s ease;
   border: 2px solid rgb(228, 214, 16);
+}
+@keyframes rotateAnimation {
+  from {
+    transform: rotateY(45deg);
+  }
+  to {
+    transform: rotateY(225deg);
+  }
 }
 
 @keyframes gradient-animation-rare {
@@ -117,16 +127,7 @@
     background-position: 0% 50%;
   }
 }
-@keyframes rare {
-  from {
-    transform: translateY(-3rem);
-    opacity: 0.3;
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0rem);
-  }
-}
+
 /* epic-rarity */
 .epic-rarity {
   /* clip-path: polygon(
@@ -144,7 +145,6 @@
     0% 85%
   ); */
   /* animation: epic 0.5s linear; */
-  animation: pullCard 0.9s ease;
 }
 @keyframes epic {
   from {
@@ -164,6 +164,7 @@
 }
 
 .gradient-background {
+  /* perspective: 500px; */
   background: linear-gradient(
     255deg,
     #8b95b5,
@@ -174,8 +175,19 @@
   );
   background-size: 300% 300%;
   border-radius: 16px;
-  animation: gradient-animation 10s ease infinite;
+  animation: gradient-animation 10s ease infinite, pullCard 0.9s ease;
   /* border: 2px solid rgb(219, 171, 182); */
+}
+
+@keyframes rare {
+  from {
+    transform: translateY(-3rem);
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
 }
 
 @keyframes gradient-animation {
