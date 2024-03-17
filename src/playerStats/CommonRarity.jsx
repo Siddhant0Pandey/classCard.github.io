@@ -14,7 +14,7 @@ function CommonRarity({ playerName, stats }) {
             />
           </div>
           <div>
-            <h1 className="font-bold text-white stats-stroke">
+            <h1 className="font-bold text-white ">
               {Math.floor((stats.PAC + stats.SHO + stats.PAS + stats.PHY) / 4)}
             </h1>
           </div>
@@ -25,7 +25,7 @@ function CommonRarity({ playerName, stats }) {
             {" "}
             <h1 className="font-bold text-white">{playerName}</h1>
           </div>
-          <div className="flex gap-3 font-semibold text-white stats-stroke">
+          <div className="flex gap-3 font-semibold text-white ">
             <div>
               <h1>PAC</h1>
               <p>{stats.PAC}</p>

@@ -13,16 +13,18 @@ const CardGame = () => {
       { playerName: "Simant", stats: { PAC: 80, SHO: 55, PAS: 60, PHY: 75 } },
       { playerName: "Amit Gre", stats: { PAC: 75, SHO: 77, PAS: 60, PHY: 72 } },
       { playerName: "Muskan", stats: { PAC: 70, SHO: 81, PAS: 83, PHY: 64 } },
-      { playerName: "Bhaivab", stats: { PAC: 73, SHO: 77, PAS: 69, PHY: 73 } },
+      { playerName: "Baivab", stats: { PAC: 73, SHO: 77, PAS: 69, PHY: 73 } },
       { playerName: "Raju", stats: { PAC: 73, SHO: 75, PAS: 69, PHY: 68 } },
       { playerName: "Subarna", stats: { PAC: 61, SHO: 73, PAS: 63, PHY: 101 } },
       { playerName: "Rishav", stats: { PAC: 64, SHO: 67, PAS: 65, PHY: 84 } },
       { playerName: "Relise", stats: { PAC: 78, SHO: 75, PAS: 77, PHY: 79 } },
+      { playerName: "Rupesh", stats: { PAC: 72, SHO: 74, PAS: 76, PHY: 78 } },
+      { playerName: "Rewan", stats: { PAC: 50, SHO: 69, PAS: 74, PHY: 74 } },
+      { playerName: "Shreedan", stats: { PAC: 56, SHO: 68, PAS: 72, PHY: 71 } },
     ],
     rare: [
       { playerName: "Sudesh", stats: { PAC: 85, SHO: 80, PAS: 80, PHY: 80 } },
       { playerName: "Ramu", stats: { PAC: 82, SHO: 81, PAS: 80, PHY: 79 } },
-      { playerName: "Rupesh", stats: { PAC: 82, SHO: 84, PAS: 86, PHY: 88 } },
       { playerName: "Amit", stats: { PAC: 84, SHO: 87, PAS: 83, PHY: 88 } },
       { playerName: "Sadip", stats: { PAC: 81, SHO: 86, PAS: 86, PHY: 89 } },
       { playerName: "Aryan", stats: { PAC: 85, SHO: 80, PAS: 83, PHY: 82 } },
@@ -36,8 +38,8 @@ const CardGame = () => {
     ],
   };
 
-  const commonChance = 80;
-  const rareChance = 25;
+  const commonChance = 70;
+  const rareChance = 20;
 
   const pullCard = (setPlayer) => {
     const randomNumber = Math.random() * 100;
@@ -104,7 +106,7 @@ const CardGame = () => {
           Pull a Card
         </button>
       </div>
-      <div className=" absolute font-sans top-[30rem] font-bold text-white text-5xl left-[30rem] result">
+      <div className=" absolute font-sans top-[30rem] font-bold text-green-300 text-5xl left-[30rem] result ">
         {determineWinner()}
       </div>
     </div>
