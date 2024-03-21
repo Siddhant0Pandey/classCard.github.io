@@ -111,7 +111,7 @@ const CardGame = () => {
   };
 
   const commonChance = 70;
-  const rareChance = 10;
+  const rareChance = 20;
 
   const pullCard = (setPlayer) => {
     const randomNumber = Math.random() * 100;
