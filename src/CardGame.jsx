@@ -3,42 +3,115 @@ import CommonRarity from "./playerStats/CommonRarity";
 import RareRarity from "./playerStats/RareRarity";
 import EpicRarity from "./playerStats/EpicRarity";
 
+// import raju from "../src/imageComponents/images";
+
+// import raju from "../src/assets/raju.jpg";
+
 const CardGame = () => {
   //   const [result, setResult] = useState(null);
   const [playerA, setPlayerA] = useState(null);
   const [playerB, setPlayerB] = useState(null);
   const players = {
     common: [
-      { playerName: "Simant", stats: { PAC: 80, SHO: 55, PAS: 60, PHY: 75 } },
-      { playerName: "Amit Gre", stats: { PAC: 75, SHO: 77, PAS: 60, PHY: 72 } },
-      { playerName: "Muskan", stats: { PAC: 70, SHO: 81, PAS: 83, PHY: 64 } },
-      { playerName: "Baivab", stats: { PAC: 73, SHO: 77, PAS: 69, PHY: 73 } },
-      { playerName: "Raju", stats: { PAC: 73, SHO: 75, PAS: 69, PHY: 68 } },
-      { playerName: "Subarna", stats: { PAC: 61, SHO: 73, PAS: 63, PHY: 101 } },
-      { playerName: "Rishav", stats: { PAC: 64, SHO: 67, PAS: 65, PHY: 84 } },
-      { playerName: "Relise", stats: { PAC: 78, SHO: 75, PAS: 77, PHY: 79 } },
-      { playerName: "Rupesh", stats: { PAC: 72, SHO: 74, PAS: 76, PHY: 78 } },
-      { playerName: "Rewan", stats: { PAC: 50, SHO: 69, PAS: 74, PHY: 74 } },
-      { playerName: "Shreedan", stats: { PAC: 56, SHO: 68, PAS: 72, PHY: 71 } },
+      {
+        playerName: "Simant",
+        stats: { PAC: 80, SHO: 55, PAS: 60, PHY: 75 },
+        image: "../src/assets/unknown.png",
+      },
+      {
+        playerName: "Amit Gre",
+        stats: { PAC: 75, SHO: 77, PAS: 60, PHY: 72 },
+        image: "../src/assets/unknown.png",
+      },
+      {
+        playerName: "Muskan",
+        stats: { PAC: 70, SHO: 81, PAS: 83, PHY: 64 },
+        image: "../src/assets/musk.jpg",
+      },
+      {
+        playerName: "Baivab",
+        stats: { PAC: 73, SHO: 77, PAS: 69, PHY: 73 },
+        image: "../src/assets/unknown.png",
+      },
+      {
+        playerName: "Raju",
+        stats: { PAC: 73, SHO: 75, PAS: 69, PHY: 68 },
+        image: "../src/assets/raju.jpg",
+      },
+      {
+        playerName: "Subarna",
+        stats: { PAC: 61, SHO: 73, PAS: 63, PHY: 101 },
+        image: "../src/assets/unknown.png",
+      },
+      {
+        playerName: "Rishav",
+        stats: { PAC: 64, SHO: 67, PAS: 65, PHY: 84 },
+        image: "../src/assets/unknown.png",
+      },
+      {
+        playerName: "Relise",
+        stats: { PAC: 78, SHO: 75, PAS: 77, PHY: 79 },
+        image: "../src/assets/unknown.png",
+      },
+      {
+        playerName: "Rupesh",
+        stats: { PAC: 72, SHO: 74, PAS: 76, PHY: 78 },
+        image: "../src/assets/unknown.png",
+      },
+      {
+        playerName: "Rewan",
+        stats: { PAC: 50, SHO: 69, PAS: 74, PHY: 74 },
+        image: "../src/assets/unknown.png",
+      },
+      {
+        playerName: "Shreedan",
+        stats: { PAC: 56, SHO: 68, PAS: 72, PHY: 71 },
+        image: "../src/assets/unknown.png",
+      },
     ],
     rare: [
-      { playerName: "Sudesh", stats: { PAC: 85, SHO: 80, PAS: 80, PHY: 80 } },
-      { playerName: "Ramu", stats: { PAC: 82, SHO: 81, PAS: 80, PHY: 79 } },
-      { playerName: "Amit", stats: { PAC: 84, SHO: 87, PAS: 83, PHY: 88 } },
-      { playerName: "Sadip", stats: { PAC: 81, SHO: 86, PAS: 86, PHY: 89 } },
-      { playerName: "Aryan", stats: { PAC: 85, SHO: 80, PAS: 83, PHY: 82 } },
+      {
+        playerName: "Sudesh",
+        stats: { PAC: 85, SHO: 80, PAS: 80, PHY: 80 },
+        image: "../src/assets/unknown.png",
+      },
+      {
+        playerName: "Ramu",
+        stats: { PAC: 82, SHO: 81, PAS: 80, PHY: 79 },
+        image: "../src/assets/unknown.png",
+      },
+      {
+        playerName: "Amit",
+        stats: { PAC: 84, SHO: 87, PAS: 83, PHY: 88 },
+        image: "../src/assets/unknown.png",
+      },
+      {
+        playerName: "Sadip",
+        stats: { PAC: 81, SHO: 86, PAS: 86, PHY: 89 },
+        image: "../src/assets/sadip.jpg",
+      },
+      {
+        playerName: "Aryan",
+        stats: { PAC: 85, SHO: 80, PAS: 83, PHY: 82 },
+        image: "../src/assets/unknown.png",
+      },
     ],
     epic: [
       {
         playerName: "Siddhant",
         stats: { PAC: 99, SHO: 102, PAS: 100, PHY: 99 },
+        image: "../src/assets/unknown.png",
       },
-      { playerName: "Sandesh", stats: { PAC: 98, SHO: 97, PAS: 99, PHY: 100 } },
+      {
+        playerName: "Sandesh",
+        stats: { PAC: 98, SHO: 97, PAS: 99, PHY: 100 },
+        image: "../src/assets/unknown.png",
+      },
     ],
   };
 
   const commonChance = 70;
-  const rareChance = 20;
+  const rareChance = 10;
 
   const pullCard = (setPlayer) => {
     const randomNumber = Math.random() * 100;
@@ -111,16 +184,33 @@ const CardGame = () => {
     </div>
   );
 };
-
 const renderPlayerCard = (playerState) => {
   const { player, rarity } = playerState;
-  if (rarity === "Common") {
-    return <CommonRarity playerName={player.playerName} stats={player.stats} />;
-  } else if (rarity === "Rare") {
-    return <RareRarity playerName={player.playerName} stats={player.stats} />;
-  } else {
-    return <EpicRarity playerName={player.playerName} stats={player.stats} />;
-  }
+  return (
+    <div>
+      {rarity === "Common" && (
+        <CommonRarity
+          playerName={player.playerName}
+          stats={player.stats}
+          image={player.image}
+        />
+      )}
+      {rarity === "Rare" && (
+        <RareRarity
+          playerName={player.playerName}
+          stats={player.stats}
+          image={player.image}
+        />
+      )}
+      {rarity === "Epic" && (
+        <EpicRarity
+          playerName={player.playerName}
+          stats={player.stats}
+          image={player.image}
+        />
+      )}
+    </div>
+  );
 };
 
 export default CardGame;

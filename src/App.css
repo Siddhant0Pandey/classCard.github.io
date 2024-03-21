@@ -223,9 +223,9 @@
 }
 
 .stats-stroke {
-  -webkit-text-stroke: 0.7px;
+  -webkit-text-stroke: 0.8px;
   -webkit-text-stroke-color: black;
-  color: white;
+  color: rgb(193, 219, 228);
 }
 /* result message */
 

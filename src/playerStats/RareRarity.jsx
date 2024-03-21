@@ -1,20 +1,20 @@
 /* eslint-disable react/prop-types */
-import unknownImage from "../imageComponents/images";
+// import unknownImage from "../imageComponents/images";
 
-function RareRarity({ playerName, stats }) {
+function RareRarity({ playerName, stats, image }) {
   return (
     <div>
       <div className="h-[340px]  w-[300px]  gradient-background-rare rare-rarity  ">
         <div className="flex justify-center items-center">
           <div className="w-200px ">
             <img
-              src={unknownImage}
-              alt="unknown Image"
-              className="imageCard self-center w-full"
+              src={image}
+              alt={playerName}
+              className="imageCard  self-center w-full shadow-lg shadow-yellow-100 rounded-e-[2rem] rounded-bl-[2rem]"
             />
           </div>
           <div>
-            <h1 className="font-bold text-white">
+            <h1 className="font-bold text-white ml-4 text-2xl">
               {Math.floor((stats.PAC + stats.SHO + stats.PAS + stats.PHY) / 4)}
             </h1>
           </div>

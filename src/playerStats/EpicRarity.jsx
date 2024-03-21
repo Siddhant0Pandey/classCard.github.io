@@ -1,20 +1,20 @@
 /* eslint-disable react/prop-types */
-import unknownImage from "../imageComponents/images";
+// import unknownImage from "../imageComponents/images";
 
-function EpicRarity({ playerName, stats }) {
+function EpicRarity({ playerName, stats, image }) {
   return (
     <div>
       <div className="h-[340px]  w-[300px] gradient-background border-2  epic-rarity  ">
         <div className="flex justify-center items-center">
           <div className="w-200px ">
             <img
-              src={unknownImage}
-              alt="unknown Image"
-              className="imageCard self-center w-full"
+              src={image}
+              alt={playerName}
+              className="imageCard  self-center w-full shadow-2xl shadow-slate-200 rounded-e-[2rem] rounded-bl-[2rem]"
             />
           </div>
           <div>
-            <h1 className="font-bold text-white stats-stroke ">
+            <h1 className="font-bold text-slate-200 stats-stroke ml-4 text-2xl">
               {Math.floor((stats.PAC + stats.SHO + stats.PAS + stats.PHY) / 4)}
             </h1>
           </div>
@@ -22,9 +22,9 @@ function EpicRarity({ playerName, stats }) {
         <div className="h-[30%] flex flex-col items-center gap-2 pt-3">
           <div>
             {" "}
-            <h1 className="font-bold text-white ">{playerName}</h1>
+            <h1 className="font-bold text-white stats-stroke">{playerName}</h1>
           </div>
-          <div className="flex gap-3 font-semibold text-white stats-stroke">
+          <div className="flex gap-3 font-semibold text-yellow-600 stats-stroke">
             <div>
               <h1>PAC</h1>
               <p>{stats.PAC}</p>
